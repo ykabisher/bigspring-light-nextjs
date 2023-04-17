@@ -9,7 +9,7 @@
     "build": "next build",
     "export": "next build && next export",
     "lint": "next lint",
-    "start": "next start -p 80"
+    "start": "next start"
   },
   "dependencies": {
     "github-slugger": "^2.0.0",
