@@ -1,12 +1,12 @@
 {
   "site": {
-    "title": "Bigspring Light Nextjs",
+    "title": "Generate wireframes with AI",
     "base_url": "/",
-    "favicon": "/images/favicon.png",
-    "logo": "/images/logo.png",
-    "logo_width": "200",
-    "logo_height": "48",
-    "logo_text": "Bigspring Light"
+    "favicon": "/images/web-design32.png",
+    "logo": "/images/web-design32.png",
+    "logo_width": "32",
+    "logo_height": "32",
+    "logo_text": "WireGen.ai"
   },
 
   "settings": {
@@ -17,7 +17,7 @@
 
   "nav_button": {
     "enable": true,
-    "label": "Get Started",
+    "label": "Add me to the wishlist",
     "link": "/contact"
   },
 
@@ -25,7 +25,7 @@
     "contact_form_action": "",
     "tag_manager_id": "",
     "footer_content": "Lorem ipsum dolor sit amet, consectetur elit. Consjat tristique eget amet, tempus eu at cttur.",
-    "copyright": "Designed and Developed By [Themefisher](https://themefisher.com/)"
+    "copyright": "Copyright WireGen.ai© 2023. All rights reserved, Designed and Developed By WireGen.ai"
   },
 
   "metadata": {

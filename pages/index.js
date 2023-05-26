@@ -17,35 +17,54 @@ const Home = ({ frontmatter }) => {
     <Base title={title}>
       {/* Banner */}
       <section className="section pb-[50px]">
+
+
         <div className="container">
+
           <div className="row text-center">
             <div className="mx-auto lg:col-10">
               <h1 className="font-primary font-bold">{banner.title}</h1>
-              <p className="mt-4">{markdownify(banner.content)}</p>
-              {banner.button.enable && (
+              <p className="mt-4 text-lg">{markdownify(banner.content)}</p>
+
+              {/* <iframe src="https://drive.google.com/file/d/1q4teK3OYBEHYhiow2-HPrI4i0iyxjFs7/preview?start=1" width="852" height="480"></iframe> */}
+              {/* <iframe src="https://www.youtube.com/embed/sODG_d5RJXw?autoplay=1" width="852" height="480" frameborder="0" allowfullscreen></iframe> */}
+              <video style={{ border: '1px solid' }} autoPlay loop muted defaultmuted className="mt-5 mx-auto max-w-[100%]">
+                <source src="https://uigeneration.s3.eu-central-1.amazonaws.com/main-video-fast.mp4" /></video>
+
+              <div className="col-start-1 row-start-4 mt-10 flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0" style={{ placeContent: 'center' }}>
+                <p className="inline-flex justify-center" style={{ display: 'flex', alignItems: 'center' }}>The Figma plug-in is ready!</p>
+
                 <Link
-                  className="btn btn-primary mt-4"
-                  href={banner.button.link}
-                  rel={banner.button.rel}
+                  className="btn btn-primary"
+                  href={'https://www.figma.com/community/plugin/1221144015267698736/'}
+                  target="_blank"
                 >
-                  {banner.button.label}
+                  {'Try it out'}
                 </Link>
-              )}
-              <Image
+
+              </div>
+
+              <div className="mt-4 text-lg">
+
+
+
+              </div>
+              {/* <Image
                 className="mx-auto mt-12"
                 src={banner.image}
                 width={750}
                 height={390}
                 alt="banner image"
                 priority
-              />
+              /> */}
+
             </div>
           </div>
         </div>
       </section>
 
       {/* Features */}
-      <section className="section bg-theme-light">
+      {/* <section className="section bg-theme-light">
         <div className="container">
           <div className="text-center">
             <h2>{markdownify(feature.title)}</h2>
@@ -73,7 +92,7 @@ const Home = ({ frontmatter }) => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* services */}
       {services.map((service, index) => {
@@ -81,41 +100,31 @@ const Home = ({ frontmatter }) => {
         return (
           <section
             key={`service-${index}`}
-            className={`section ${isOdd && "bg-theme-light"}`}
+            className={`section`}
           >
             <div className="container">
               <div className="items-center gap-8 md:grid md:grid-cols-2">
                 {/* Carousel */}
+
                 <div className={`service-carousel ${!isOdd && "md:order-2"}`}>
-                  <Swiper
-                    modules={[Autoplay, Pagination]}
-                    pagination={
-                      service.images.length > 1 ? { clickable: true } : false
-                    }
-                    autoplay={{
-                      delay: 5000,
-                      disableOnInteraction: false,
-                    }}
-                    init={service?.images > 1 ? false : true}
-                  >
-                    {/* Slides */}
-                    {service?.images.map((slide, index) => (
-                      <SwiperSlide key={index}>
-                        <Image src={slide} alt="" width={600} height={500} />
-                      </SwiperSlide>
-                    ))}
-                  </Swiper>
+                  {
+                    service?.video ? <video width="320" height="240" autoplay>
+                      <source src={service?.video} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video> : <Image src={service?.images[0]} quality={100} alt="" width={500} height={400} />
+                  }
+
+
                 </div>
 
                 {/* Content */}
                 <div
-                  className={`service-content mt-5 md:mt-0 ${
-                    !isOdd && "md:order-1"
-                  }`}
+                  className={`service-content mt-5 md:mt-0 ${!isOdd && "md:order-1"
+                    }`}
                 >
                   <h2 className="font-bold leading-[40px]">{service?.title}</h2>
                   <p className="mt-4 mb-2">{service?.content}</p>
-                  {service.button.enable && (
+                  {/* {service.button.enable && (
                     <Link
                       href={service?.button.link}
                       className="cta-link inline-flex items-center text-primary"
@@ -129,7 +138,7 @@ const Home = ({ frontmatter }) => {
                         alt="arrow"
                       />
                     </Link>
-                  )}
+                  )} */}
                 </div>
               </div>
             </div>
@@ -138,7 +147,7 @@ const Home = ({ frontmatter }) => {
       })}
 
       {/* workflow */}
-      <section className="section pb-0">
+      {/* <section className="section pb-0">
         <div className="mb-8 text-center">
           {markdownify(
             workflow.title,
@@ -153,10 +162,10 @@ const Home = ({ frontmatter }) => {
           width={1920}
           height={296}
         />
-      </section>
+      </section> */}
 
       {/* Cta */}
-      <Cta cta={call_to_action} />
+      {/* <Cta cta={call_to_action} /> */}
     </Base>
   );
 };

@@ -4,6 +4,10 @@ import Contact from "@layouts/Contact";
 import Default from "@layouts/Default";
 import Faq from "@layouts/Faq";
 import Pricing from "@layouts/Pricing";
+import PrivacyPolicy from "@layouts/PrivacyPolicy";
+import Success from "@layouts/Success";
+import TermsOfUse from "@layouts/TermsOfUse";
+
 import { getRegularPage, getSinglePage } from "@lib/contentParser";
 
 // for all regular pages
@@ -23,11 +27,23 @@ const RegularPages = ({ data }) => {
     >
       {layout === "404" ? (
         <NotFound data={data} />
+
       ) : layout === "contact" ? (
         <Contact data={data} />
+
       ) : layout === "pricing" ? (
         <Pricing data={data} />
-      ) : layout === "faq" ? (
+
+      ) : layout === "privacypolicy" ? (
+        <PrivacyPolicy data={data} />
+
+        ) : layout === "termsofuse" ? (
+        <TermsOfUse data={data} />
+
+      ) : layout === "success" ? (
+        <Success data={data} />
+
+      ): layout === "faq" ? (
         <Faq data={data} />
       ) : (
         <Default data={data} />

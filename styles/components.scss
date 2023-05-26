@@ -112,3 +112,14 @@
     @apply font-semibold text-dark;
   }
 }
+
+.success-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.success-icon {
+  width: 220px; /* Change this value to make the icon bigger or smaller */
+  height: 220px; /* Change this value to make the icon bigger or smaller */
+}

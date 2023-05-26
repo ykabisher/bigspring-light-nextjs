@@ -1,7 +1,7 @@
 import config from "@config/config.json";
 import { markdownify } from "@lib/utils/textConverter";
 
-const Contact = ({ data }) => {
+const PrivacyPolicy = ({ data }) => {
   const { frontmatter } = data;
   const { title, info } = frontmatter;
   const { contact_form_action } = config.params;
@@ -9,7 +9,7 @@ const Contact = ({ data }) => {
   return (
     <section className="section">
       <div className="container">
-      <iframe style={{width: 'inherit', height: '1500px'}} src="https://docs.google.com/forms/d/e/1FAIpQLSfIZKqjXCA61fUZJc3guN3klRG4ylf2CPdIl9cGJa38Q3oEcw/viewform?embedded=true" frameBorder="0" marginHeight="0" marginWidth="0">Loading…</iframe>
+      {/* <iframe style={{width: 'inherit', height: '1500px'}} src="https://docs.google.com/forms/d/e/1FAIpQLSfIZKqjXCA61fUZJc3guN3klRG4ylf2CPdIl9cGJa38Q3oEcw/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> */}
         {/* {markdownify(title, "h1", "text-center font-normal")} */}
         {/* <div className="section row pb-0">
           <div className="col-12 md:col-6 lg:col-7">
@@ -74,4 +74,4 @@ const Contact = ({ data }) => {
   );
 };
 
-export default Contact;
+export default PrivacyPolicy;

@@ -11,10 +11,16 @@ const Footer = () => {
   const { footer } = menu;
   return (
     <footer className="section bg-theme-light pb-0">
-      <div className="container">
+      <div className="container text-center">
         {/* footer menu */}
-        <div className="row">
-          {footer.map((col) => {
+        <div className="-my-1 flex flex-col justify-center gap-x-6 md:flex-row">
+        <Link href={'/privacypolicy'} rel="">
+                        {'Privacy Policy'}
+                      </Link>
+                      <Link href={'/termsofuse'} rel="">
+                        {'Terms of Use'}
+                      </Link>
+          {/* {footer.map((col) => {
             return (
               <div className="mb-12 sm:col-6 lg:col-3" key={col.name}>
                 {markdownify(col.name, "h2", "h4")}
@@ -29,9 +35,9 @@ const Footer = () => {
                 </ul>
               </div>
             );
-          })}
+          })} */}
           {/* social icons */}
-          <div className="md-12 sm:col-6 lg:col-3">
+          {/* <div className="md-12 sm:col-6 lg:col-3">
             <Link href="/" aria-label="Bigspring">
               <Image
                 src={config.site.logo}
@@ -42,7 +48,7 @@ const Footer = () => {
             </Link>
             {markdownify(footer_content, "p", "mt-3 mb-6")}
             <Social source={social} className="social-icons mb-8" />
-          </div>
+          </div> */}
         </div>
         {/* copyright */}
         <div className="border-t border-border py-6">

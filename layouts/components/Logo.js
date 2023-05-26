@@ -11,19 +11,22 @@ const Logo = ({ src }) => {
     <Link
       href={base_url}
       className="navbar-brand block py-1"
-      style={{
-        height: logo_height.replace("px", "") + "px",
-        width: logo_width.replace("px", "") + "px",
-      }}
+     
     >
       {src || logo ? (
+        <div className="flex items-center">
         <Image
-          width={logo_width.replace("px", "") * 2}
-          height={logo_height.replace("px", "") * 2}
+          width={logo_width.replace("px", "")}
+          height={logo_height.replace("px", "")}
           src={src ? src : logo}
           alt={title}
           priority
+          className="mr-3"
         />
+        {logo_text}
+        </div>
+       
+        
       ) : logo_text ? (
         logo_text
       ) : (

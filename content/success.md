@@ -1,46 +1,48 @@
 ---
-title: Simple pricing for everyone
-subtitle: Make powerful wireframes in seconds 
-layout: pricing
+title: Your payment is successful
+subtitle: Thank you for your payment. You can now go back to Figma and make magic happen!
+layout: success
 draft: false
 plans:
 - title: 20 Generations
   subtitle: Best For Small Individuals
-  price: 5
+  price: 49
   type: month
   features:
-    - 5 Max characters
-    - 80 Max characters
-    - 5 Max screens per generation
+    - Express Service
+    - Customs Clearance
+    - Time-Critical Services
   button:
-    label: Comming soon
+    label: Buy
     link: "/contact"
 
 - title: 50 Generations
   subtitle: Best For Professionals
-  price: 10
+  price: 69
   type: month
   recommended: true
   disscount: 20
   features:
-    - 10 Max characters
-    - 200 Max characters
-    - 10 Max screens per generation
+    - Express Service
+    - Customs Clearance
+    - Time-Critical Services
+    - Cloud Service
+    - Best Dashboard
   button:
-    label: Comming soon
+    label: Buy
     link: "/contact"
 
 - title: 100 Generations
   subtitle: Best For Large Individuals
-  price: 15
+  price: 99
   disscount: 20
   type: month
   features:
-    - 15 Max characters
-    - 500 Max characters
-    - 15 Max screens per generation
+    - Express Service
+    - Customs Clearance
+    - Time-Critical Services
   button:
-    label: Comming soon
+    label: Buy
     link: "/contact"
 
 call_to_action:
