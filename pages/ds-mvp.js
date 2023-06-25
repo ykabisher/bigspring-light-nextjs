@@ -17,8 +17,8 @@ const Home = () => {
   const handleGenerate = async () => {
     setShowSpinner(true);
     setExp('')
-    const response = await fetch('https://ds-gen1-jrsxmikr5q-uc.a.run.app', {
-    // const response = await fetch('http://127.0.0.1:5001/slides-ai-376007/us-central1/ds_gen1', {
+    // const response = await fetch('https://ds-gen1-jrsxmikr5q-uc.a.run.app', {
+    const response = await fetch('http://127.0.0.1:5001/slides-ai-376007/us-central1/ds_gen1', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -36,7 +36,8 @@ const Home = () => {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
     <style>
-  ${!!jsResp.style?jsResp.style:''}
+  ${!!jsResp.additional_css_from_ds?jsResp.additional_css_from_ds:''}
+
   div.toast {
     display: block !important;
   }
@@ -131,7 +132,7 @@ const Home = () => {
             </Card.Body>
           </Card>
         </Stack>
-        version 3
+        version 4
       </Container>
   
     </div>
