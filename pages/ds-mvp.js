@@ -215,8 +215,8 @@ const Home = () => {
               <Button onClick={handleAskQuestions}>Ask Questions</Button>
 
               {questions.map((question, key) => {
-                return <div>
-                  <p key={key}>{question.text}</p>
+                return <div key={key}>
+                  <p >{question.text}</p>
                   <Stack direction="horizontal" gap={2}>
                     {question.answeres.map((ans, ansKey) =>
                       <Button onClick={() => { answerQuestion(key, ans) }} key={ansKey} variant={question.finalAnswer === ans ? "success" : "secondary"}>{ans}</Button>)}
